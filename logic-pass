@@ -1,0 +1,45 @@
+########## Q1 ############
+def removeChar(a,b):
+    return a.replace(b, '')
+
+a =input("enter string:")
+b = input("enter char you want to remove:")
+print("the string after remove the char",b,"is",removeChar(a,b))
+
+
+
+
+########## Q2 ############
+def primeNum(a,b):
+    primeList=[]
+    for num in range(a, b + 1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                primeList.append(num)
+
+    return primeList
+
+a =int( input("enter the first number:"))
+b = int(input("enter the second number:"))
+print("Prime numbers between", a, "and", b, "are: ",primeNum(a,b))
+
+
+
+########## Q3 ############
+def count(a, b):
+    result = 0
+    for i in range(len(a)):
+
+        if (a[i] == b):
+            result = result + 1
+    return result
+
+
+a =input("enter string:")
+b = input("enter char you want to cont:")
+
+print("The char", b," has been repeated ", count(a,b),"times",)
+
